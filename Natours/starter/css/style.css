@@ -6,3 +6,102 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* 
+
+Pillars of writing good HTML and CSS
+
+1. Responsive design
+2. maintainable and scalable code (clean, readable, reusable)
+3. web performance : less http req, less code, compress code, css preprocessor, less images, compress images
+
+BTS : Load HTML -> parse HTML ===============================> DOM
+                    |                                            |      
+                    v                                            v           
+                Load CSS => Parse CSS {Resolving conflics} ==> CSSOM
+                                                                  |
+                                                                  v
+
+Final                   Website rendering         <======  Render Tree
+ Rendering         the visual formatting model
+
+                (box model, floats, etc)
+                
+*/
+
+/* CSS Rule : {selector, declaration block}
+
+casacade : process of combining different stylesheets and resolving conflicts b/w different CSS rules and declarations, when more than one rule applirs to a certain element 
+  >> author declaration css : css by developers
+  >> user agent css : css by browsers 
+
+                    same imp?                       same specificity?
+                    ------->                       ------------>
+  importance (weight)              > specificity >               source order :::: for precedance order
+                            (count the number of                    
+                         occurances of each selector)
+  User !important         1. inline                                 the last declaration in the code will override all others
+  Author !important       2. IDs                                        and will be applied
+  Author declarations     3. class, pseudo class
+  User declarations       4. Elements and pseudo elm
+  browser default
+ */
+
+/* > use !important as the last resource
+> inline styles will have priority over external stylesheets
+> * - universal selector : no specificity (0,0,0,0)
+> rely more on specificity than on the order of selectors
+> rely on order while using 3rd-party stylesheets : always put your author stylesheet :last */
+
+/* css values processing
+
+
+
+fonts (%)           x% * parent's computed font-size 
+
+lengths(%)          x% * parents's computed width 
+
+
+[font-based]
+em(font)           x * parent computed font-size  
+    
+em(length)         x * current element computed font-size
+
+rem                x * root computed font-size 
+                   x * root computed length 
+
+[Viewport-based]
+vh 
+(1vh = 1% of viewport ht)
+vw 
+(1vw = 1% of viewport wd)
+
+ */
+/* Inheritance
+
+Every CSS prop must have a value : 
+
+            Is there a cascaded value ?
+
+            A. yes : 
+                specified value = cascaded value 
+            B. no :
+
+                Is the property inherited? (specific to each prop)
+
+                A. yes:
+                    specified value = computed value of parent element 
+                    (THIS IS INHERITANCE)
+                B. no 
+                specified value = initial value (specific to each prop)
+
+
+inherited prop : (prop related to text)  font, color, 
+non - inherited : margin , padding, border
+
+'inherit' : forces inheritance on certain prop
+'initial' : resets a prop to it's intial value
+
+ */
+
+/* 1rem = 10px */
