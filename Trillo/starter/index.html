@@ -14,7 +14,52 @@
 </head>
 
 <body>
-    Hello.. check again
+    <div class="container">
+        <header class="header">
+            <img src="img/logo.png" alt="trillo logo" class="logo">
+            <!-- BEM notation for css class names  -->
+            <!-- search : block -->
+            <form action="#" class="search">
+                <!-- search__input : element -->
+                <input type="text" class="search__input" placeholder="Search hotels">
+                <button class="search__button">
+                    <!-- moving to svg from icons due to various issues with icons -->
+                    <!-- svg : scalable vector graphics :::: writing vector graphics with code -->
+                    <!-- IcoMoon.io -->
+                    <svg class="search__icon">
+                        <!-- always use svg sprite while calling svg. this will create only one http request and all the svgs will be dumped on client in one go -->
+                        <use xlink:href='img/sprite.svg#icon-magnifying-glass'></use>
+                    </svg>
+                </button>
+            </form>
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href='img/sprite.svg#icon-bookmark'></use>
+                    </svg>
+                    <span class="user-nav__notification">7</span>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href='img/sprite.svg#icon-chat'></use>
+                    </svg>
+                    <span class="user-nav__notification">9</span>
+                </div>
+                <div class="user-nav__user">
+                    <img src="img/user.jpg" alt="User Photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">John</span>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <nav class="sidebar">
+                Navigation
+            </nav>
+            <main class="hotel-view">
+                Hotel View
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>
