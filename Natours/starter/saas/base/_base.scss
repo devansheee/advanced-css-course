@@ -1,0 +1,17 @@
+//partial sass file as filename is starting with _
+
+/* universal selector */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 30px;
+}
