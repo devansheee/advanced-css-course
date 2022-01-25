@@ -8,10 +8,13 @@
 @import "abstract/variables";
 
 @import "pages/home";
-@import "components/button";
+
 @import "layout/header";
 @import "layout/grid";
+
+@import "components/button";
 @import "components/composition";
+@import "components/feature-box";
 
 /* 1rem = 10px */
 /* 
